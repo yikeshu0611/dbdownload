@@ -4,7 +4,7 @@
 #' @param yearn year begin number
 #' @param dirn directory begin number
 #' @param filen file begin number
-#'
+#' @param mode mode, default is wb
 #' @return download by r directory
 #' @export
 #'
@@ -12,7 +12,7 @@
 #' \donttest{
 #' NhaNes.download(BeginYear = NULL, yearn=2, dirn=1, filen=1)
 #' }
-NhaNes.download <- function(BeginYear = NULL, yearn=2, dirn=1, filen=1){
+NhaNes.download <- function(BeginYear = NULL, yearn=2, dirn=1, filen=1,mode='wb'){
   home_url = 'https://wwwn.cdc.gov/nchs/nhanes'
   html = read_html(home_url)
   year_href = html %>%
@@ -68,7 +68,7 @@ NhaNes.download <- function(BeginYear = NULL, yearn=2, dirn=1, filen=1){
             paste0(', filen=',k),
             '-',dir1,'-',dir2)
         cat('\n')
-        download.file(file_url[k],filename[k])
+        download.file(file_url[k],filename[k],mode = mode)
       }
     }
   }

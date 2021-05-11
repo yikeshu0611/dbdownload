@@ -4,7 +4,7 @@
 \alias{NhaNes.download}
 \title{download NhaNes data base by r directory}
 \usage{
-NhaNes.download(BeginYear = NULL, yearn = 2, dirn = 1, filen = 1)
+NhaNes.download(BeginYear = NULL, yearn = 2, dirn = 1, filen = 1, mode = "wb")
 }
 \arguments{
 \item{BeginYear}{year of begin}
@@ -14,6 +14,8 @@ NhaNes.download(BeginYear = NULL, yearn = 2, dirn = 1, filen = 1)
 \item{dirn}{directory begin number}
 
 \item{filen}{file begin number}
+
+\item{mode}{mode, default is wb}
 }
 \value{
 download by r directory

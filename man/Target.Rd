@@ -3,12 +3,12 @@
 %   R/Target_download_file.R, R/Target_download_url.R
 \name{Target}
 \alias{Target}
-\alias{Target_download_dir}
+\alias{Target_getURLs}
 \alias{Target_download_file}
 \alias{Target_download_url}
 \title{Download data from Target database}
 \usage{
-Target_download_dir(url)
+Target_getURLs(url = "https://target-data.nci.nih.gov/Public/")
 
 Target_download_file(url)
 
